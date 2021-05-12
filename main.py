@@ -39,4 +39,12 @@ def say_welcome(message):
         message.chat.id,
         '<b>Hello! Get your publishers stats  <a href="https://admin.bullionyield.com/publisher/login">Bullion.Yield</a></b>',
         parse_mode='html'
-    )
+    ),
+@bot.message_handler(commands=['help', 'start'])
+def say_welcome(message):
+    logger.info(f'</code>@{message.from_user.username}<code> ({message.chat.id}) used /start or /help')
+    bot.send_message(
+        message.chat.id,
+        '<b>Hello! Get your publishers stats  <a href="https://admin.bullionyield.com/publisher/login">Bullion.Yield</a></b>',
+        parse_mode='html'
+    ),
