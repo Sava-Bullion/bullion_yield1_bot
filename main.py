@@ -33,14 +33,14 @@ def say_welcome(message):
     logger.info(f'</code>@{message.from_user.username}<code> ({message.chat.id}) used /start or /help')
     bot.send_message(
         message.chat.id,
-        '<b>Hello! Wellcome to Bullion.Media <a href="https://bullion.media/">Bullion.Media.</a>Type /admin to get adnig login page</b>',
+        '<b>Hello! Wellcome to <a href="https://bullion.media/">Bullion.Media.</a></b>',
         parse_mode='html'
     )
     
     
     bot.send_message(
         message.chat.id,
-        '<b>Type /admin to get adnig login page. Type /publisher to get publisher stats page. Type /advertiser to get advertiser stats page</b>',
+        '<b>Type /admin to get admin login page. Type /publisher to get publisher stats page. Type /advertiser to get advertiser stats page</b>',
         parse_mode='html'
     )
     
