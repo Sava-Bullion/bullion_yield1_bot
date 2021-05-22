@@ -9,11 +9,7 @@ from webhook import app
 # --------------- dialog params -------------------
 dialog = {
     'hello': {
-        'in': ['hello', 'hi', 'privet', 'hey','Hello', 'Hi','Hey'],
-        'out': ['What`s up', 'Yo Nigga', 'Sup bro!', 'Hey! Me so horny!', 'GET OVER HERE!']
-    },
-    'привет': {
-        'in': ['привет', 'Здравствуйте', 'hi', 'privet', 'hey'],
+        'in': ['привет', 'hello', 'hi', 'privet', 'hey'],
         'out': ['Приветствую', 'Здравствуйте', 'Привет!']
     },
     'how r u': {
