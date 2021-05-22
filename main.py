@@ -32,7 +32,17 @@ dialog = {
 
 
 # --------------- bot -------------------
-@bot.message_handler(commands=['help', 'start'])
+@bot.message_handler(commands=['start'])
+def say_welcome(message):
+    logger.info(f'</code>@{message.from_user.username}<code> ({message.chat.id}) used /start or /help')
+    bot.send_message(
+        message.chat.id,
+        '<b>Hello! Wellcome to Bullion.Media <a href="https://bullion.media/">Bullion.Media</a></b>',
+        parse_mode='html'
+    )
+    
+    
+@bot.message_handler(commands=['publisher'])
 def say_welcome(message):
     logger.info(f'</code>@{message.from_user.username}<code> ({message.chat.id}) used /start or /help')
     bot.send_message(
@@ -42,12 +52,22 @@ def say_welcome(message):
     )
     
     
-@bot.message_handler(commands=['help', 'start'])
+@bot.message_handler(commands=['advertiser'])
 def say_welcome(message):
     logger.info(f'</code>@{message.from_user.username}<code> ({message.chat.id}) used /start or /help')
     bot.send_message(
         message.chat.id,
-        '<b>Hello! Get your publishers stats  <a href="https://admin.bullionyield.com/publisher/login">Bullion.Yield</a></b>',
+        '<b>Hello! Get your publishers stats  <a href="https://admin.bullionyield.com/advertiser/login">Bullion.Yield</a></b>',
+        parse_mode='html'
+    )
+    
+
+@bot.message_handler(commands=['admin'])
+def say_welcome(message):
+    logger.info(f'</code>@{message.from_user.username}<code> ({message.chat.id}) used /start or /help')
+    bot.send_message(
+        message.chat.id,
+        '<b>Let`s ROCK them today!  <a href="https://admin.bullionyield.com/admin/login">Bullion.Yield</a></b>',
         parse_mode='html'
     )
     
