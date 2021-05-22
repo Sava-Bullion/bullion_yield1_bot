@@ -35,7 +35,6 @@ def say_welcome(message):
         message.chat.id,
         '<b>Hello! Wellcome to Bullion.Media <a href="https://bullion.media/">Bullion.Media.</a>Type /admin to get adnig login page</b>',
         parse_mode='html'
-    else:
         message.chat.id,
         '<b>Type /admin to get adnig login page. Type /publisher to get publisher stats page. Type /advertiser to get advertiser stats page</b>',
         parse_mode='html'
