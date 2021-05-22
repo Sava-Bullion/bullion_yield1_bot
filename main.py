@@ -68,7 +68,7 @@ def say_welcome(message):
     )
     
     
-    @bot.message_handler(func=lambda message: True)
+@bot.message_handler(func=lambda message: True)
 def echo(message):
     for t, resp in dialog.items():
         if sum([e in message.text.lower() for e in resp['in']]):
